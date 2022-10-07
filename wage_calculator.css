@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: #FA8B00;
+    ---green: rgba(35,134,54);
+    --lgreen: hsl(132, 59%, 39%);
+    --dgray: rgb(1,4,9);
+    --gray: rgb(13,17,23);
+    --lgray: rgb(177,186,196);
+    --white: rgb(201,209,217);
+    --dwhite: rgb(85,91,101);
+}
+
+html {
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: var(--dgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: var(--gray);
+    width: clamp(30%, 600px, 60%);
+    padding: 25px 40px 40px 40px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    box-shadow: 0 0 12px 1px;
+}
+
+input {
+    width: 8rem;
+    border: var(--dwhite) 1px solid;
+    padding: 5px;
+    transition: 0.3s;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white)
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(---green);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    border-radius: 8px;
+    width: 120px;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--lgreen);
+}
+
+#wage, .weekly, .monthly, .median {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#wage {
+    border-left: 2px solid var(--dwhite);
+    border-top: 2px solid var(--dwhite);
+    border-bottom: 1px solid var(--dwhite);
+    border-right: 1px solid var(--dwhite);
+}
+
+.weeks {
+    margin-bottom: 45px;
+}
+
+.monthly {
+    height: 100px;
+    border-top: 2px solid var(--dwhite);
+    border-right: 2px solid var(--dwhite);
+    border-bottom: 1px solid var(--dwhite);
+    border-left: 1px solid var(--dwhite);
+}
+
+.weekly {
+    height: 100px;
+    border-left: 2px solid var(--dwhite);
+    border-bottom: 2px solid var(--dwhite);
+    border-right: 1px solid var(--dwhite);
+    border-top: 1px solid var(--dwhite);
+}
+
+.median {
+    height: 100px;
+    border-bottom: 2px solid var(--dwhite);
+    border-right: 2px solid var(--dwhite);
+    border-left: 1px solid var(--dwhite);
+    border-top: 1px solid var(--dwhite);
+}
+
+#result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 25px;
+    visibility: hidden;
+    height: 0;
+}
+
+
+.permonth, .perhour, .perweek, .mediant {
+    color: var(--dwhite);
+    text-align: center;
+    margin-top: -7px;
+}
+
+span {
+    font-size: 2rem;
+    color: var(--white);
+    text-align: center;
+    margin-top: -6px;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.salary, .hours, .weeks {
+    text-align: center;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Wage Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="wage_calculator.css">
+        <link rel="icon" type="image/x-icon" href="https://www.reshot.com/preview-assets/icons/VQYBSN4XAC/calculator-VQYBSN4XAC.svg">
+    </head>
+    <body>
+        <div class="container">
+            <div class="values">
+                <div class="salary">
+                    <h2 id="sal">Annual Salary</h2>
+                    <input min="0" id="salary" type="number">
+                </div>
+                <div class="hours">
+                    <h2>Hours a week</h2>
+                    <input min="0" value="40" id="hours" type="number">
+                </div>
+                <div class="weeks">
+                    <h2>Weeks a year</h2>
+                    <input min="0" value="50" id="weeks" type="number">
+                </div>
+            </div>
+
+            <div id="result">
+                <div id="wage"><p class="perhour">Hourly Pay</p><span id="hourVal"></span></div>
+                <div class="monthly"><p class="permonth">Monthly Pay</p><span id="monthVal"></span></div>
+                <div class="weekly"><p class="perweek">Weekly Pay</p><span id="weekVal"></span></div>
+                <div class="median"><p class="mediant">% of Median</p><span id="medianVal"></span></div>
+            </div>
+
+            <div class="btns">
+                <button id="calculateBtn">Calculate</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+        <script src="wage_calculator.js" async defer></script>
+    </body>
+</html>
